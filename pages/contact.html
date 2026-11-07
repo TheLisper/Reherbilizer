@@ -4,44 +4,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | Reherbalizer</title>
-  <link rel="stylesheet" href="C:\Users\ntsiz\.vscode\Reherbilizer\styles.css">
-
-
+  <meta name="description" content="Contact Reherbalizer to ask a question, refer a young person or share feedback. Find our location on the map.">
+  <meta name="keywords" content="youth rehabilitation, herbal remedies, drug abuse support, township youth, community support, South Africa, contact">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <link rel="canonical" href="https://thelisper.github.io/Reherbilizer/pages/contact.html">
+  <meta property="og:title" content="Contact | Reherbalizer">
+  <meta property="og:description" content="Contact Reherbalizer to ask a question, refer a young person or share feedback. Find our location on the map.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thelisper.github.io/Reherbilizer/pages/contact.html">
+  <link rel="stylesheet" href="../styles.css">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' https://unpkg.com; img-src 'self' data: https://*.tile.openstreetmap.org https://unpkg.com; connect-src https://formsubmit.co; form-action https://formsubmit.co; base-uri 'self'">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header>
     <h1>Reherbalizer</h1>
-    <nav>
+    <nav aria-label="Main">
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="../index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="enquiry.html">Enquiry</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
+  <main id="main">
     <section class="contact">
       <h2>Contact Us</h2>
       <p>If you have any questions or would like to get in touch, please fill out the form below:</p>
-      <form action="#" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
+      <form id="contact-form" action="https://formsubmit.co/you@example.com" method="post" novalidate>
+        <div><label for="name">Name:</label>
+        <input type="text" id="name" name="name" required minlength="2" maxlength="60" autocomplete="name"><span class="error" id="name-error" role="alert"></span></div>
+        <div><label for="email">Email:</label>
+        <input type="email" id="email" name="email" required autocomplete="email"><span class="error" id="email-error" role="alert"></span></div>
+        <div><label for="phone">Phone (optional):</label>
+        <input type="tel" id="phone" name="phone" pattern="(\+27|0)[6-8][0-9]{8}" autocomplete="tel"><span class="error" id="phone-error" role="alert"></span></div>
+        <div><label for="type">Type of message:</label>
+        <select id="type" name="type" required><option value="">Choose one</option><option>General question</option><option>Refer a young person</option><option>Feedback</option><option>Media</option></select><span class="error" id="type-error" role="alert"></span></div>
+        <div><label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required minlength="10" maxlength="1000"></textarea><span class="error" id="message-error" role="alert"></span></div>
         <button type="submit">Send Message</button>
       </form>
+      <div id="status" class="status" tabindex="-1" hidden></div>
+      <div id="map" role="region" aria-label="Map showing our location"></div>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2026 Reherbalizer. All rights reserved.</p>
   </footer>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="../script.js" defer></script>
 </body>
 </html>
