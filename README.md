@@ -1,49 +1,83 @@
-# 🌿 Reherbilizer : https://github.com/TheLisper/Reherbilizer.git
+# Reherbalizer
 
-Reherbalizer was established early this year in response to the growing challenge of drug abuse among young people in township communities.
+Reherbalizer is a community-focused website supporting township youth affected by drug abuse through herbal wellness, peer support, life-skills coaching, and positive community care.
 
-Our mission is to support youth through healing, community care, and positive life direction. This project presents a simple website built to raise awareness and promote support for young people in need of rehabilitation and guidance.
+**Live site:** https://thelisper.github.io/Reherbilizer/
 
-## 📁 Project Structure
+## What the site includes
 
-- `index.html` — homepage
-- `pages/about.html` — about section
-- `pages/services.html` — services section
-- `pages/contact.html` — contact form page
-- `styles.css` — project styling
-- `assets/` — images and visual assets
+- **Home:** programme overview, illustrated service cards, and an accessible image gallery with a lightbox
+- **About:** organisation values presented in an interactive accordion
+- **Services:** dynamically rendered programmes with search, category filtering, sorting, cost, and availability details
+- **Enquiry:** validated service, volunteering, and sponsorship enquiries with immediate cost and availability feedback
+- **Contact:** validated contact form and an interactive Leaflet/OpenStreetMap map
+- **Responsive layout:** desktop and mobile navigation, reduced-motion support, and accessible form statuses
+- **SEO:** page descriptions, Open Graph metadata, canonical URLs, structured data, and a sitemap
 
-## 🧩 Purpose of the Website
+## Services currently configured
 
-This website is designed to:
+| Service | Cost | Availability |
+| --- | --- | --- |
+| Herbal Therapy | Free for youth | Tuesdays and Thursdays, 16:00 |
+| Life-Skills Coaching | R50 per session; sponsored places available | Mondays and Wednesdays, 15:30 |
+| Community Support Programs | Free | Saturdays, 10:00 |
 
-- raise awareness about youth drug abuse challenges
-- highlight the support services offered
-- promote healing and community-based recovery
-- provide a way for visitors to contact the organization
+Service information is defined in `script.js` and can be updated by editing the `SERVICES` array.
 
-## 🎨 Styling
+## Project structure
 
-The website uses custom CSS to create a clean, welcoming, and mobile-friendly layout with:
+```text
+.
+├── index.html          # Home page and image gallery
+├── pages/
+│   ├── about.html      # About page and accordion
+│   ├── services.html   # Searchable service directory
+│   ├── enquiry.html    # Service, volunteer, and sponsor enquiry form
+│   └── contact.html    # Contact form and interactive map
+├── assets/             # Site artwork and illustrations
+├── script.js           # Shared interactions, data, validation, and form handling
+├── styles.css          # Shared responsive styling
+├── sitemap.xml         # Search engine sitemap
+└── .vscode/            # Local launch configuration
+```
 
-- soft green and earthy color themes
-- responsive sections
-- card layouts
-- navigation bar
-- contact form styling
+## Running locally
 
-## 🚀 How to Run
+The site has no build step. Serve the project directory to avoid browser restrictions around local files:
 
-Open the `index.html` file in your browser to view the website locally.
+```powershell
+python -m http.server 8080
+```
 
-Example:
-- double-click `index.html`, or
-- use a live preview extension in VS Code
+Then open http://localhost:8080. The repository also includes a VS Code Edge launch configuration for port 8080.
 
-## 📞 Contact
+You can also open `index.html` directly, or use the VS Code Live Preview or Live Server extension.
 
-For more information or support, please use the contact page included in the project.
+## Configuration
 
-## 💚 Mission Statement
+Before publishing, replace the sample values in `script.js`:
 
-To help young people find healing, purpose, and a healthier future through support, guidance, and community care.
+- `RECIPIENT`: the email address that receives contact and enquiry submissions
+- `MAP_CENTER`: the latitude and longitude displayed on the map
+- `SERVICES`: programme names, categories, descriptions, costs, and availability
+
+The forms use FormSubmit for AJAX delivery. Replace the placeholder `you@example.com` action URLs in the enquiry and contact pages with the same real recipient used by `RECIPIENT`.
+
+## Accessibility and safety
+
+- Keyboard-accessible navigation, gallery controls, accordion controls, forms, and lightbox
+- Visible validation messages and live status feedback
+- Reduced-motion support and semantic page landmarks
+- Herbal programmes are clearly presented as support that does not replace professional medical care
+
+## Technologies
+
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- FormSubmit
+- Leaflet and OpenStreetMap
+
+## Mission
+
+To help young people find healing, purpose, and a healthier future through support, guidance, natural wellness, and community care.
