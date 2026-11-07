@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enquiry | Reherbalizer</title>
+  <meta name="description" content="Enquire about Reherbalizer's services, or about volunteering or sponsoring. Get cost and availability details straight away.">
+  <meta name="keywords" content="youth rehabilitation, herbal remedies, drug abuse support, township youth, community support, South Africa, volunteer, sponsor">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <link rel="canonical" href="https://thelisper.github.io/Reherbilizer/pages/enquiry.html">
+  <meta property="og:title" content="Enquiry | Reherbalizer">
+  <meta property="og:description" content="Enquire about Reherbalizer's services, or about volunteering or sponsoring. Get cost and availability details straight away.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thelisper.github.io/Reherbilizer/pages/enquiry.html">
+  <link rel="stylesheet" href="../styles.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <h1>Reherbalizer</h1>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="enquiry.html" aria-current="page">Enquiry</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="enquiry">
+      <h2>Make an Enquiry</h2>
+      <p>Tell us what you need and we will show you the cost and availability straight away.</p>
+      <form id="enquiry-form" action="https://formsubmit.co/you@example.com" method="post" novalidate>
+        <div><label for="name">Full name</label>
+        <input type="text" id="name" name="name" required minlength="2" maxlength="60" autocomplete="name"><span class="error" id="name-error" role="alert"></span></div>
+        <div><label for="email">Email address</label>
+        <input type="email" id="email" name="email" required autocomplete="email"><span class="error" id="email-error" role="alert"></span></div>
+        <div><label for="phone">Phone number (e.g. 082 123 4567)</label>
+        <input type="tel" id="phone" name="phone" required pattern="(\+27|0)[6-8][0-9]{8}" autocomplete="tel"><span class="error" id="phone-error" role="alert"></span></div>
+        <div><label for="type">I want to enquire about</label>
+        <select id="type" name="type" required><option value="">Choose one</option><option value="service">A service</option><option value="volunteer">Volunteering</option><option value="sponsor">Sponsoring</option></select><span class="error" id="type-error" role="alert"></span></div>
+        <div id="service-wrap" hidden><label for="service">Which service?</label>
+        <select id="service" name="service"><option value="">Choose a service</option></select><span class="error" id="service-error" role="alert"></span></div>
+        <div><label for="date">Preferred start date</label>
+        <input type="date" id="date" name="date" required><span class="error" id="date-error" role="alert"></span></div>
+        <div><label for="message">Message (10 to 500 characters)</label>
+        <textarea id="message" name="message" rows="4" required minlength="10" maxlength="500"></textarea><span class="error" id="message-error" role="alert"></span></div>
+        <button type="submit">Send enquiry</button>
+      </form>
+      <div id="response" class="status ok" tabindex="-1" hidden></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Reherbalizer. All rights reserved.</p>
+  </footer>
+  <script src="../script.js" defer></script>
+</body>
+</html>
