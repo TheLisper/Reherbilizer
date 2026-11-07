@@ -3,20 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home |Reherbalizer</title>
+  <title>Home | Reherbalizer</title>
+  <meta name="description" content="Reherbalizer supports township youth recovering from drug abuse through herbal wellness, community support and life-skills coaching.">
+  <meta name="keywords" content="youth rehabilitation, herbal remedies, drug abuse support, township youth, community support, South Africa">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <link rel="canonical" href="https://thelisper.github.io/Reherbilizer/index.html">
+  <meta property="og:title" content="Home | Reherbalizer">
+  <meta property="og:description" content="Reherbalizer supports township youth recovering from drug abuse through herbal wellness, community support and life-skills coaching.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thelisper.github.io/Reherbilizer/index.html">
   <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"NGO","name":"Reherbalizer","description":"Herbal wellness and community support for township youth","url":"https://thelisper.github.io/Reherbilizer/","areaServed":"South Africa"}</script>
+  <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header style="background-color: #328fab; background-image: repeating-linear-gradient(45deg, transparent 0 12px, rgba(44, 91, 56, 0.08) 12px 14px), repeating-linear-gradient(-45deg, transparent 0 12px, rgba(44, 91, 56, 0.08) 12px 14px);">
     <h1>Reherbalizer</h1>
     <nav aria-label="Main">
       <ul>
-        <li><a href="C:\Users\ntsiz\.vscode\Reherbilizer\index.html">Home</a></li>
-        <li><a href="C:\Users\ntsiz\.vscode\Reherbilizer\pages\about.html">About</a></li>
-        <li><a href="C:\Users\ntsiz\.vscode\Reherbilizer\pages\Services.html">Services</a></li>
-        <li><a href="C:\Users\ntsiz\.vscode\Reherbilizer\pages\enquiry.html">Enquiry</a></li>
-        <li><a href="C:\Users\ntsiz\.vscode\Reherbilizer\pages\contact.html">Contact</a></li>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="pages/about.html">About</a></li>
+        <li><a href="pages/services.html">Services</a></li>
+        <li><a href="pages/enquiry.html">Enquiry</a></li>
+        <li><a href="pages/contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -25,38 +35,39 @@
     <section class="hero">
       <h2>Welcome to Reherbalizer</h2>
       <p>Empowering youth through natural healing and rehabilitation.</p>
-      <a class="btn" href="C:\Users\ntsiz\.vscode\Reherbilizer\pages\Services.html">Learn More about Our Services</a>
+      <a class="btn" href="pages/services.html">Learn more about our services</a>
     </section>
-  
-    <div class="hero-image-container">
-      <img
-        src="assets/reherbilizer.png"
-        alt="Youth support and healing"
-        class="hero-image"
-      />
-    </div>
-  
 
-   <section >
+    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+      <img src="C:\Users\ntsiz\Downloads\Reherbilizer-part3\assets\images\reherbilizer.png" alt="Young people receive support on their healing journey in a community setting, with a hopeful and encouraging atmosphere." class="hero-image" width="900" height="500" style="flex: 1 1 300px; min-width: 0;">
+      <img src="C:\Users\ntsiz\Downloads\Reherbilizer-part3\assets\images\reherbilizer.png" alt="Young people receive support on their healing journey in a community setting, with a hopeful and encouraging atmosphere." class="hero-image" width="900" height="500" style="flex: 1 1 300px; min-width: 0;">
+      <img src="C:\Users\ntsiz\Downloads\Reherbilizer-part3\assets\images\reherbilizer.png" alt="Young people receive support on their healing journey in a community setting, with a hopeful and encouraging atmosphere." class="hero-image" width="900" height="500" style="flex: 1 1 300px; min-width: 0;">
+    </div>
+
+    <section>
       <h2>How we help</h2>
       <div class="cards">
-        <article class="card">
-          <h3>Herbal Therapy</h3>
-          <p>We provide natural herbal remedies to support mental and physical health.</p>
-        </article>
-        <article class="card">
-          <h3>Community Support</h3>
-          <p>Peer groups and mentors from the township who understand the road young people face.</p>
-        </article>
-        <article class="card">
-          <h3>A new direction</h3>
-          <p>Life-skills coaching to guide youth toward positive choices and future success.</p>  
+        <article class="card reveal"><h3>Herbal therapy</h3><p>We provide natural herbal remedies to support mental and physical health.</p></article>
+        <article class="card reveal"><h3>Community support</h3><p>Peer groups and mentors from the township who understand the road young people face.</p></article>
+        <article class="card reveal"><h3>A new direction</h3><p>Life-skills coaching to guide youth toward positive choices and future success.</p></article>
       </div>
     </section>
+
+    <section>
+      <h2>Our work in pictures</h2>
+      <div class="gallery" id="gallery">
+        <button type="button"><img src="assets/images/herbal-tea-workshop.svg" alt="Herbal tea workshop for young people" loading="lazy"></button>
+        <button type="button"><img src="assets/images/peer-support-circle.svg" alt="Peer support circle meeting" loading="lazy"></button>
+        <button type="button"><img src="assets/images/life-skills-coaching.svg" alt="Life-skills coaching session" loading="lazy"></button>
+        <button type="button"><img src="assets/images/community-garden.svg" alt="Community herb garden" loading="lazy"></button>
+      </div>
+    </section>
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer"><button type="button" id="lightbox-close" aria-label="Close image">&times;</button><img src="" alt=""><p></p></div>
   </main>
 
   <footer>
     <p>&copy; 2026 Reherbalizer. All rights reserved.</p>
   </footer>
+  <script src="script.js" defer></script>
 </body>
 </html>
