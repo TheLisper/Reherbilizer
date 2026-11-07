@@ -4,40 +4,55 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About | Reherbalizer</title>
-  <link rel="stylesheet" href="C:\Users\ntsiz\.vscode\Reherbilizer\styles.css">
+  <meta name="description" content="Learn about Reherbalizer, a community organisation helping township youth overcome drug abuse with herbal wellness and peer support.">
+  <meta name="keywords" content="youth rehabilitation, herbal remedies, drug abuse support, township youth, community support, South Africa">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <link rel="canonical" href="https://thelisper.github.io/Reherbilizer/pages/about.html">
+  <meta property="og:title" content="About | Reherbalizer">
+  <meta property="og:description" content="Learn about Reherbalizer, a community organisation helping township youth overcome drug abuse with herbal wellness and peer support.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thelisper.github.io/Reherbilizer/pages/about.html">
+  <link rel="stylesheet" href="../styles.css">
+  <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header>
     <h1>Reherbalizer</h1>
-    <nav>
+    <nav aria-label="Main">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="pages/about.html">About</a></li>
-        <li><a href="pages/Services.html">Services</a></li>
-        <li><a href="pages/contact.html">Contact</a></li>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="enquiry.html">Enquiry</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section class="about">
+  <main id="main">
+    <section class="about reveal">
       <h2>About Us</h2>
       <p>Welcome to Reherbalizer! We are a community-based organization dedicated to supporting youth in their journey toward positive change and future success.</p>
       <p>Our team of experienced professionals and volunteers work together to provide a safe and supportive environment for young people to explore their potential and overcome challenges.</p>
     </section>
 
     <section>
-        <h2>What we stand for</h2>
-        <ul>
-            <li>Empowering youth through natural healing and rehabilitation.</li>
-            <li>Providing access to herbal therapy and life-skills coaching.</li>
-            <li>Fostering a sense of community and support among young people.</li>
-        </ul>
+      <h2>What we stand for</h2>
+      <div class="accordion">
+        <button type="button" aria-expanded="false" aria-controls="p1" id="b1">Natural healing and rehabilitation</button>
+        <div class="panel" id="p1" role="region" aria-labelledby="b1"><p>We empower youth through natural healing, using herbal remedies safely alongside professional advice.</p></div>
+        <button type="button" aria-expanded="false" aria-controls="p2" id="b2">Herbal therapy and life-skills coaching</button>
+        <div class="panel" id="p2" role="region" aria-labelledby="b2"><p>Young people get access to herbal therapy and coaching that rebuilds routines, goals and confidence.</p></div>
+        <button type="button" aria-expanded="false" aria-controls="p3" id="b3">Community and support</button>
+        <div class="panel" id="p3" role="region" aria-labelledby="b3"><p>Recovery works best with neighbours, families and peers taking part, so we build that sense of community.</p></div>
+      </div>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2026 Reherbalizer. All rights reserved.</p>
   </footer>
+  <script src="../script.js" defer></script>
 </body>
 </html>

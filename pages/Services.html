@@ -4,43 +4,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services | Reherbalizer</title>
-  <link rel="stylesheet" href="C:\Users\ntsiz\.vscode\Reherbilizer\styles.css">
+  <meta name="description" content="Explore Reherbalizer's herbal therapy, life-skills coaching and community support programmes for township youth. Search and filter by category.">
+  <meta name="keywords" content="youth rehabilitation, herbal remedies, drug abuse support, township youth, community support, South Africa, herbal therapy, life-skills coaching">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <link rel="canonical" href="https://thelisper.github.io/Reherbilizer/pages/services.html">
+  <meta property="og:title" content="Services | Reherbalizer">
+  <meta property="og:description" content="Explore Reherbalizer's herbal therapy, life-skills coaching and community support programmes for township youth. Search and filter by category.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thelisper.github.io/Reherbilizer/pages/services.html">
+  <link rel="stylesheet" href="../styles.css">
+  <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header>
     <h1>Reherbalizer</h1>
-    <nav>
+    <nav aria-label="Main">
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="../index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="Services.html">Services</a></li>
+        <li><a href="services.html" aria-current="page">Services</a></li>
+        <li><a href="enquiry.html">Enquiry</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
+  <main id="main">
     <section class="services">
       <h2>Our Services</h2>
-      <div class="cards">
-        <article class="card">
-          <h3>Herbal Therapy</h3>
-          <p>We provide natural herbal remedies to support mental and physical health.</p>
-        </article>
-        <article class="card">
-          <h3>Life-Skills Coaching</h3>
-          <p>Our experienced coaches guide youth toward positive choices and future success.</p>
-        </article>
-        <article class="card">
-          <h3>Community Support Programs</h3>
-          <p>We offer peer groups and mentorship programs to foster a sense of community and support among young people.</p>
-        </article>
+      <div class="toolbar">
+        <input type="search" id="search" placeholder="Search services" aria-label="Search services">
+        <select id="category" aria-label="Filter by category"><option value="all">All categories</option></select>
+        <select id="sort" aria-label="Sort services"><option value="name">Sort by name</option><option value="cost">Sort by cost</option></select>
       </div>
+      <div class="cards" id="service-list" aria-live="polite"></div>
+      <p class="empty" id="no-results" hidden>No services match your search. Try a different word or category.</p>
     </section>
+    <section class="notice"><p><strong>Please note:</strong> our herbal programmes support, but do not replace, medical care. <a href="enquiry.html">Make an enquiry</a> to find out more.</p></section>
   </main>
 
   <footer>
     <p>&copy; 2026 Reherbalizer. All rights reserved.</p>
   </footer>
+  <script src="../script.js" defer></script>
 </body>
 </html>
